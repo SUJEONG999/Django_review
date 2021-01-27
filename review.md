@@ -1,4 +1,4 @@
-cmd 창에 **ipconfig** 입력하면  DNS, IP Address,Subnet Mask, Gateway의 주소가 나온다. (기본적인 네트워크 정보 확인) : 내 컴퓨터의 ip 주소 확인할 때
+내 컴퓨터의 IP 주소 확인할 때, cmd 창에 **ipconfig** 입력하면  DNS, IP Address,Subnet Mask, Gateway의 주소가 나온다. (기본적인 네트워크 정보 확인) 
 
 우리가 통상적으로 알아보려는 ip주소는 아래표시된 IPv4주소이다.
 
@@ -119,9 +119,9 @@ HttpRequest.POST # POST 파라미터를 담고 있는 딕셔너리 같은 객체
 
 **get()** 메서드는 키값이 딕셔너리 안에 있으면 밸류값을 리턴해준다. 키값이 존재하지 않으면 디폴트값 None을 리턴한다.
 
-**request.GET.get()**은 위 두 개념을 합친 것으로 GET요청이 접근할 수 있는 키와 밸류값을 이용한다. 이것은 장고 뷰스에서 대부분 쓰여진다.
+**request.GET.get()** 은 위 두 개념을 합친 것으로 GET요청이 접근할 수 있는 키와 밸류값을 이용한다. 이것은 장고 뷰스에서 대부분 쓰여진다.
 
-**request.GET.get()**은 괄호안에 key를 입력하면 value를 가져와주는 것
+**request.GET.get() **은 괄호안에 key를 입력하면 value를 가져와주는 것
 
 출처 : https://yulme.tistory.com/56
 
