@@ -81,9 +81,47 @@ http://localhost:8000/secondapp/exam2/  : ---> views.exam2 수행
 
 http://localhost:8000/workapp/exercise1/
 
-![image-20210127134336657](C:\Users\jinsujeong\Desktop\빅\1월27일\review\images\image-20210127134336657.png)
 
-![image-20210127153610445](C:\Users\jinsujeong\Desktop\빅\1월27일\review\images\image-20210127153610445.png)
+
+**[ 장고 실습 - 1 ]**
+
+1. 실습용 장고 프로젝트를 한 개 생성한다.
+
+   cmd 창에서 c:\xxx\DJANGOexam 폴더로 옮겨가고 여기에서 exerciseproject 이라는 프로젝트 폴더를 생성한다.
+
+2. exerciseproject을 파이참에서 오픈한다.
+
+3. exerciseproject의 실행 환경을 djangovenv 이라는 가상환경으로 설정한다.
+
+4. workapp 이라는 장고앱을 생성한다.
+5. 프로젝트의 `settings.py` 파일의 INSTALLED_APPS에 wrokapp 을 등록한다.(33행)
+   LANGUAGE_CODE(**'ko-kr'**) 와 TIME_ZONE(**'Asia/Seoul'**)도 설정한다.(107행)
+
+6. 프로젝트의 urls.py 파일에 workapp1의 urls.py 를 “workapp/”이라는 매핑명으로 등록한다.
+
+(include하라는 겁니다요)
+
+7. workapp1의 다음 기능의 웹 서버 프로그램을 구현한다.
+
+   브라우저에서 http://localhost:8000/workapp/exercise1/이라고 요청하면 
+
+   `<h1> 안녕하세요? XXX가 만든 첫 장고 웹 페이지 입니다.</h1>`         
+
+[ 요구사항 ]
+
+- 구현하는 뷰의 함수명은 exercise1() 이다.
+
+- 브라우저에서 요청할 때 사용하는 URL에 작성할 이 뷰에 대한 매핑명은  “exercise1/” 이다.
+
+  (이 때 매핑 정보를 등록하는 urls.py 는 workapp 에 있는 urls.py 이다.)
+
+- 응답 역할의 템플릿은 exercise1.html 으로 한다
+
+- XXX은 본인의 이름 또는 별명이며 뷰에서 템플릿인 HTML에 전달한다.
+
+![image-20210127134336657](./images/image-20210127134336657.png)
+
+![image-20210127153610445](./images/image-20210127153610445.png)
 
 301 : URL 끝에 / (슬래시) 안붙이면 다시 요청시킴. (결과는 나오지만, 내부적으로 통신이 한번 더 일어나게됨.)
 
@@ -121,7 +159,7 @@ HttpRequest.POST # POST 파라미터를 담고 있는 딕셔너리 같은 객체
 
 **request.GET.get()** 은 위 두 개념을 합친 것으로 GET요청이 접근할 수 있는 키와 밸류값을 이용한다. 이것은 장고 뷰스에서 대부분 쓰여진다.
 
-**request.GET.get() **은 괄호안에 key를 입력하면 value를 가져와주는 것
+**request.GET.get()** 은 괄호안에 key를 입력하면 value를 가져와주는 것
 
 출처 : https://yulme.tistory.com/56
 
@@ -163,7 +201,7 @@ HTTP client 가 HTTP Server 요청시 서버에서 요청하려는 대상의 URI
 
   **POST** : Query 문자열이 외부에 보여지지 않는다. Query 문자열의 길이에 제한이 없다.
 
-![image-20210127160940181](C:\Users\jinsujeong\Desktop\빅\1월27일\review\images\image-20210127160940181.png)
+![image-20210127160940181](./images/image-20210127160940181.png)
 
 https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=ABCabc+123+%EA%B0%80%EB%82%98%EB%8B%A4
 
@@ -191,16 +229,24 @@ http://localhost:8000/secondapp/exam5/
 
 get 방식
 
-![image-20210127170649251](C:\Users\jinsujeong\Desktop\빅\1월27일\review\images\image-20210127170649251.png)
+![image-20210127170649251](./images/image-20210127170649251.png)
 
 
 
 http://localhost:8000/secondapp/exam5/?name=%EC%A7%84%EC%88%98%EC%A0%95
 
-![image-20210127170955857](C:\Users\jinsujeong\Desktop\빅\1월27일\review\images\image-20210127170955857.png)
+![image-20210127170955857](./images/image-20210127170955857.png)
 
 ```html
 <a href="http://localhost:8000/secondapp/exam2_1/?info1=aa&info2=BB&info3=CC"></a>
 ```
 
 검색할 내용을 붙여서 응답할 수 있다.
+
+
+
+<exam6를 활용한 실습2>
+
+http://localhost:8000/secondapp/exam6/
+
+http://localhost:8000/workapp/exercise2/
